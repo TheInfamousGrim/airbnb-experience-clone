@@ -20,17 +20,24 @@ Notes:
   this data into the component.
 */
 
-export default function Card({ img, rating, reviewCount, country, title, price }) {
+export default function Card({ coverImg, stats, country, title, price, openSpots, location }) {
+    let badgeText;
+    if (openSpots === 0) {
+      badgeText = 'sold out'
+    } else if (location === 'Online') {
+      badgeText = 'Online'
+    } 
+
     return (
         <div className="card">
+          {badgeText && <div className="card__experience-status">{badgeText}</div>}
           <div className="card__img-container">
-            <img src={img} alt="katie zaferes a woman wearing a swimsuit and goggles above her eyes by the pool" />
-            <p className="card__experience-status">sold out</p>
+            <img src={coverImg} alt="Course picture" />
           </div>
           <div className="card__experience-info">
             <div className="card__experience-rating">
               <img className="card__star-img" src={starPng} alt="a red star" />
-              <p className="card__rating-txt">{rating} <span className="card__rating-text--grey-font grey">{`(${reviewCount})`} • {country}</span></p>
+              <p className="card__rating-txt">{stats.rating} <span className="card__rating-text--grey-font grey">{`(${stats.reviewCount})`} • {country}</span></p>
             </div>
             <p className="card__experience-description">{title}</p>
             <p className="card__experience-price"><span className="card__experience-price--bold font-weight-600">From ${price}</span> / person</p>

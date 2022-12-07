@@ -8,27 +8,29 @@ import Navbar from './components/navbar';
 import Hero from './components/Hero';
 import Card from './components/Card';
 
-// Assets
-import katieImg from './assets/katie-zaferes.png';
+// Data
+import data from './data/data'
 
 
 function App() {
+  const cardArray = data.map(data => {
+    return (
+      <Card
+        key={data.id} 
+        {...data}
+      />
+    )
+  })
+
   return (
     <div className="App">
       <Navbar />
       <Hero />
       <div className="cards-section">
-        <Card
-          img={katieImg}
-          rating={'5.0'}
-          reviewCount={6}
-          country="USA"
-          title="Life lessons with Katie Zafares"
-          price={136}
-        />
+        {cardArray}
       </div>
     </div>
   )
 }
 
-export default App
+export default App;
