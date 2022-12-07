@@ -2,6 +2,14 @@
   text-align: center;
 }
 
+.grey {
+  color: #918e9b;
+}
+
+.font-weight-600 {
+  font-weight: 600;
+}
+
 /* --------------------------------- navbar --------------------------------- */
 
 .navbar {
@@ -32,4 +40,56 @@
 
 .hero__txt-body {
   max-width: 20rem;
+}
+
+/* ---------------------------- experience cards ---------------------------- */
+
+.card {
+  position: absolute;
+  margin: 0 2.3rem;
+}
+
+.card__img-container > img {
+  border-radius: 9px;
+}
+
+.card__experience-status {
+  padding: 0.5rem;
+  background-color: #fff;
+  width: fit-content;
+  position: relative;
+  top: -360px;
+  left: 10px;
+  border-radius: 10px;
+  text-transform: uppercase;
+  font-size: 1rem;
+}
+
+.card__experience-info {
+  margin-top: -4rem;
+  text-align: left;
+}
+
+.card__experience-rating {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.card__star-img {
+  width: 1rem;
+  height: 1rem;
+}
+
+.card__rating-text--grey-font {
+  color: #918e9b;
+  font-weight: 300;
+}
+
+.card__experience-description {
+  margin-top: 0;
+}
+
+.card__experience-price--bold {
+  font-weight: 600;
 }

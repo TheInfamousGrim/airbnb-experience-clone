@@ -1,4 +1,6 @@
 import React from "react"
+import cardImg from '../assets/katie-zaferes.png';
+import starPng from '../assets/star.png';
 
 /*
 Challenge: Build the Card component
@@ -21,6 +23,19 @@ Notes:
 
 export default function Card() {
     return (
-        <h1>Replace this</h1>
+        <div className="card">
+          <div className="card__img-container">
+            <img src={cardImg} alt="katie zaferes a woman wearing a swimsuit and goggles above her eyes by the pool" />
+            <p className="card__experience-status">sold out</p>
+          </div>
+          <div className="card__experience-info">
+            <div className="card__experience-rating">
+              <img className="card__star-img" src={starPng} alt="a red star" />
+              <p className="card__rating-txt">5.0 <span className="card__rating-text--grey-font grey">{'(6)'} • USA</span></p>
+            </div>
+            <p className="card__experience-description">Life lessons with Katie Zafares</p>
+            <p className="card__experience-price"><span className="card__experience-price--bold font-weight-600">From $136</span> / person</p>
+          </div>
+        </div>
     )
 }
