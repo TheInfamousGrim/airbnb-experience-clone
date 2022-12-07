@@ -8,13 +8,25 @@ import Navbar from './components/navbar';
 import Hero from './components/Hero';
 import Card from './components/Card';
 
+// Assets
+import katieImg from './assets/katie-zaferes.png';
+
 
 function App() {
   return (
     <div className="App">
       <Navbar />
       <Hero />
-      <Card />
+      <div className="cards-section">
+        <Card
+          img={katieImg}
+          rating={'5.0'}
+          reviewCount={6}
+          country="USA"
+          title="Life lessons with Katie Zafares"
+          price={136}
+        />
+      </div>
     </div>
   )
 }
