@@ -1,0 +1,35 @@
+#root {
+  text-align: center;
+}
+
+/* --------------------------------- navbar --------------------------------- */
+
+.navbar {
+  height: 4rem;
+  display: flex;
+  padding: 1.3rem 2.3rem;
+  box-shadow: 0px 2.98256px 7.4564px rgba(0, 0, 0, 0.1);
+}
+
+.navbar__logo {
+  max-width: 13rem;
+}
+
+/* ------------------------------ hero section ------------------------------ */
+
+.hero {
+  display: flex;
+  flex-direction: column;
+}
+
+.hero__img {
+  max-width: 100%;
+}
+
+.hero__txt-container {
+  text-align: left;
+}
+
+.hero__txt-body {
+  max-width: 20rem;
+}
